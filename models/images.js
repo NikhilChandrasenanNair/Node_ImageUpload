@@ -7,5 +7,5 @@ let ImagesSchema = new Schema({
   contentType: String
 });
 
-// export the model
+// export the mongoose model
 module.exports = mongoose.model("Image", ImagesSchema);

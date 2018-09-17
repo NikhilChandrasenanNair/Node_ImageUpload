@@ -27,7 +27,7 @@ MongoClient.connect(
   }
 );
 
-/* const upload = multer({
+const upload = multer({
   dest: "images/",
   limits: { fileSize: 10000000, files: 1 },
   fileFilter: (req, file, callback) => {
@@ -54,7 +54,7 @@ router.get("/images/:imagename", (req, res) => {
 
   res.writeHead(200, { "Content-Type": mime });
   res.end(image, "binary");
-}); */
+});
 
 app.use("/", router);
 
@@ -67,4 +67,4 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(port);
-console.log(`App Runs on ${port}`);
+console.log(`App runs on ${port}`);
